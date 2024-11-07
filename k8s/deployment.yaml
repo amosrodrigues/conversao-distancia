@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: conversao-distancia
 spec:
-  replicas: 3
+  replicas: 8
   selector:
     matchLabels:
       app: conversao-distancia
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: conversao-distancia
-          image: amosrodrigues/conversao-distancia:v1
+          image: amosrodrigues/conversao-distancia:v2
           ports:
             - containerPort: 5000
 ---
